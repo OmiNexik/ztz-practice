@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загорский Трубный Завод - Металлургия 2.0</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="ЗТЗ Логотип">
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Продукция</a></li>
+                    <li><a href="#">Производство</a></li>
+                    <li><a href="#">Клиенты</a></li>
+                    <li><a href="#">Карьера</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="cta-button">
+                <a href="#" class="btn primary-btn">Запросить КП</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background">
+            <video autoplay muted loop>
+                <source src="{{ url_for('static', filename='images/hero-video.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-content">
+            <h1>Создаем будущее стали.<br>Металлургия 2.0</h1>
+            <a href="#products" class="btn secondary-btn">Наша продукция</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>О Загорском Трубном Заводе</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Загорский Трубный Завод (ЗТЗ) – современное металлургическое предприятие, основанное в 2015-2016 годах в г. Пересвет, Россия. Мы специализируемся на производстве труб большого диаметра и являемся ключевым игроком на российском и международном рынке стальных труб.</p>
+                    <p>Наша концепция "Металлургия 2.0" представляет собой металлургическое производство нового поколения с фокусом на технологическое развитие, эффективность и клиентоориентированность.</p>
+                </div>
+                <div class="key-facts">
+                    <div class="fact">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>2015</h3>
+                        <p>Год основания</p>
+                    </div>
+                    <div class="fact">
+                        <i class="fas fa-industry"></i>
+                        <h3>750 000</h3>
+                        <p>тонн/год</p>
+                    </div>
+                    <div class="fact">
+                        <i class="fas fa-globe-americas"></i>
+                        <h3>15+</h3>
+                        <p>стран экспорта</p>
+                    </div>
+                    <div class="fact">
+                        <i class="fas fa-certificate"></i>
+                        <h3>API, ISO</h3>
+                        <p>сертификация</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Наша продукция</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-icon">
+                        <img src="{{ url_for('static', filename='images/product-lsaw.svg') }}" alt="LSAW трубы">
+                    </div>
+                    <h3>LSAW трубы</h3>
+                    <p>Трубы большого диаметра с продольным швом для магистральных трубопроводов</p>
+                    <a href="#" class="btn text-btn">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <img src="{{ url_for('static', filename='images/product-clad.svg') }}" alt="Плакированные трубы">
+                    </div>
+                    <h3>Плакированные трубы (API-5LD)</h3>
+                    <p>Биметаллические трубы для транспортировки агрессивных сред</p>
+                    <a href="#" class="btn text-btn">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <img src="{{ url_for('static', filename='images/product-sheet.svg') }}" alt="Шпунтовые сваи">
+                    </div>
+                    <h3>Шпунтовые сваи</h3>
+                    <p>Для гидротехнического и инфраструктурного строительства</p>
+                    <a href="#" class="btn text-btn">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <img src="{{ url_for('static', filename='images/product-insulated.svg') }}" alt="Изолированные трубы">
+                    </div>
+                    <h3>Изолированные трубы</h3>
+                    <p>Трубы с антикоррозийным и теплоизоляционным покрытием</p>
+                    <a href="#" class="btn text-btn">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <img src="{{ url_for('static', filename='images/product-piles.svg') }}" alt="Сваи">
+                    </div>
+                    <h3>Сваи</h3>
+                    <p>Для фундаментов и объектов промышленного строительства</p>
+                    <a href="#" class="btn text-btn">Подробнее <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="clients">
+        <div class="container">
+            <h2>Нам доверяют</h2>
+            <div class="client-logos">
+                <div class="client-logo"><img src="{{ url_for('static', filename='images/client-gazprom.svg') }}" alt="Газпром"></div>
+                <div class="client-logo"><img src="{{ url_for('static', filename='images/client-rosneft.svg') }}" alt="Роснефть"></div>
+                <div class="client-logo"><img src="{{ url_for('static', filename='images/client-lukoil.svg') }}" alt="ЛУКОЙЛ"></div>
+                <div class="client-logo"><img src="{{ url_for('static', filename='images/client-novatek.svg') }}" alt="НОВАТЭК"></div>
+                <div class="client-logo"><img src="{{ url_for('static', filename='images/client-sibur.svg') }}" alt="СИБУР"></div>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide">
+                    <p class="testimonial-text">"ЗТЗ показал себя как надежный партнер, продукция которого отвечает высочайшим стандартам качества и требованиям наших проектов."</p>
+                    <div class="testimonial-author">Представитель ПАО "Газпром"</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="production">
+        <div class="container">
+            <h2>Производственное совершенство</h2>
+            <div class="production-content">
+                <div class="production-video">
+                    <video controls poster="{{ url_for('static', filename='images/production-poster.jpg') }}">
+                        <source src="{{ url_for('static', filename='images/production-video.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+                <div class="production-stats">
+                    <div class="stat">
+                        <h3>750 000</h3>
+                        <p>тонн/год производственная мощность</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>автоматизированные линии покрытия</p>
+                    </div>
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <p>контроль качества внутренних и внешних швов</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="certifications">
+        <div class="container">
+            <h2>Сертификация и стандарты</h2>
+            <div class="certification-badges">
+                <div class="badge"><img src="{{ url_for('static', filename='images/cert-api-5l.svg') }}" alt="API 5L"></div>
+                <div class="badge"><img src="{{ url_for('static', filename='images/cert-api-5ld.svg') }}" alt="API 5LD"></div>
+                <div class="badge"><img src="{{ url_for('static', filename='images/cert-iso-9001.svg') }}" alt="ISO 9001"></div>
+                <div class="badge"><img src="{{ url_for('static', filename='images/cert-tr-cu.svg') }}" alt="TR CU"></div>
+                <div class="badge"><img src="{{ url_for('static', filename='images/cert-gost.svg') }}" alt="GOST"></div>
+            </div>
+            <p class="certifications-text">Вся продукция ЗТЗ соответствует международным стандартам качества и имеет сертификацию для поставок на российский и международный рынки.</p>
+        </div>
+    </section>
+
+    <section class="social-engagement">
+        <div class="container">
+            <h2>Социальная ответственность</h2>
+            <div class="social-content">
+                <div class="social-image">
+                    <img src="{{ url_for('static', filename='images/social-impact.jpg') }}" alt="Социальные проекты ЗТЗ">
+                </div>
+                <div class="social-text">
+                    <p>ЗТЗ активно поддерживает социальные и культурные проекты в регионе. Мы спонсируем спортивные мероприятия, включая турнир "Легенды хоккея", и инвестируем в развитие местного сообщества.</p>
+                    <p>Наша компания создает рабочие места и обеспечивает комфортные условия труда для специалистов региона.</p>
+                    <a href="#" class="btn text-btn">Наши социальные проекты <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="careers">
+        <div class="container">
+            <h2>Карьера в ЗТЗ</h2>
+            <div class="careers-content">
+                <div class="careers-text">
+                    <p>Мы предлагаем отличные возможности для профессионального роста инженеров, квалифицированных рабочих и специалистов в области металлургии.</p>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> Современное оборудование и технологии</li>
+                        <li><i class="fas fa-check-circle"></i> Корпоративное жилье для специалистов</li>
+                        <li><i class="fas fa-check-circle"></i> Программа обучения и повышения квалификации</li>
+                        <li><i class="fas fa-check-circle"></i> Карьерный рост и развитие</li>
+                    </ul>
+                    <a href="#" class="btn primary-btn">Вакансии</a>
+                </div>
+                <div class="careers-image">
+                    <img src="{{ url_for('static', filename='images/careers.jpg') }}" alt="Карьера в ЗТЗ">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="{{ url_for('static', filename='images/logo-white.svg') }}" alt="ЗТЗ Логотип">
+                    </div>
+                    <p>Металлургия 2.0: технологии, эффективность, клиентоориентированность</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Контакты</h4>
+                    <p><strong>Завод:</strong> Россия, Московская область, г. Пересвет</p>
+                    <p><strong>Офис в Москве:</strong> Москва, ул. Примерная, 123</p>
+                    <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+                    <p><strong>Email (общий):</strong> info@ztz.ru</p>
+                    <p><strong>Email (HR):</strong> career@ztz.ru</p>
+                    <p><strong>Email (продажи):</strong> sales@ztz.ru</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Быстрые ссылки</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Продукция</a></li>
+                        <li><a href="#">Клиенты</a></li>
+                        <li><a href="#">Карьера</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2238.5187994053015!2d38.17396731593033!3d56.41886198070424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b4bb39eba6717b%3A0x1f0cd44e68b4b0f3!2z0JfQsNCz0L7RgNGB0LrQuNC5INCi0YDRg9Cx0L3Ri9C5INCX0LDQstC-0LQ!5e0!3m2!1sru!2sru!4v1578000000000!5m2!1sru!2sru" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Загорский Трубный Завод. Все права защищены.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Правовая информация</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="{{ url_for('static', filename='js/vendor/TextPlugin.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
+</body>
+</html>
